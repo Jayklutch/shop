@@ -3,3 +3,10 @@
 If this is your first time here, please sign up
 
 If you are a returning customer, you can sign in.
+
+<table id='producttable'>
+<% @items.each do |item|
+<tr><td>item.name</td></tr>
+<tr><td>item.price</td></tr>
+<%end>
+</table>
