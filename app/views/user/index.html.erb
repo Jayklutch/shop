@@ -4,9 +4,11 @@ If this is your first time here, please sign up
 
 If you are a returning customer, you can sign in.
 
+<p> In between this line should be a table of products (once they are added) </p>
 <table id='producttable'>
 <% @items.each do |item| %>
 <tr><td><%=item.name%></td></tr>
 <tr><td><%=item.price%></td></tr>
 <% end %>
 </table>
+<p> Here is where the table stops </p>
