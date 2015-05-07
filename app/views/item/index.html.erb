@@ -1,0 +1,8 @@
+<p> In between this line should be a table of products (once they are added) </p>
+<table id='producttable'>
+<% @items.each do |item| %>
+<tr><td><%=item.name%></td></tr>
+<tr><td><%=item.price%></td></tr>
+<% end %>
+</table>
+<p> Here is where the table stops </p>

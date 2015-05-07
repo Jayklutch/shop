@@ -1,4 +1,4 @@
 class UserController < ApplicationController
-  @users=Users.all
-  @admin=Users.find_by
+  @users=User.all
+#  @admin=User.find_by
 end

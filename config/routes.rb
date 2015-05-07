@@ -6,6 +6,11 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
    root 'user#index'
 
+   get 'catalog/'=>'item#index'
+   get 'catalog/edit'=>'item#edit'
+   get 'catalog/delete'=>'item#delete'
+   get 'catalog/new'=>'item#add'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
