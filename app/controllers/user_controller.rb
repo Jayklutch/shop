@@ -1,4 +1,6 @@
 class UserController < ApplicationController
-  @users=User.all
+def index
+    @users=User.all
 #  @admin=User.find_by
+end
 end
