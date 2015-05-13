@@ -1,0 +1,8 @@
+<h1> DELETE PAGE </h1>
+<table>
+<% @items.each do |item| %>
+<tr><td> <%=item.name %> </td></tr>
+<tr><td> DELETE <% if x=1 %>
+  <%item.destroy %> </td></tr>
+<% end %>
+</table>

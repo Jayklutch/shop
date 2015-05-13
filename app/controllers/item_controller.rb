@@ -4,7 +4,8 @@ class ItemController < ApplicationController
   end
 
   def add
-    @items=Item.all
+    @product=Item.new(params.require(:item).permit(:name,:price))
+@product.save
   end
 
   def edit
@@ -15,5 +16,5 @@ class ItemController < ApplicationController
     @items=Item.all
   end
 
-  
+
 end
