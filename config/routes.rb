@@ -10,9 +10,14 @@ Rails.application.routes.draw do
    get 'catalog/'=>'item#index'
    get 'catalog/edit'=>'item#edit'
    get 'catalog/delete'=>'item#delete'
+   delete 'catalog/delete'=>'item#delete'
+
    get 'catalog/new'=>'item#add'
    post 'catalog/new'=>'item#add'
    patch 'catalog/new'=>'item#add'
+   post 'create'=>'item#create'
+   patch 'create'=>'item#create'
+   get 'create'=>'item#add'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
