@@ -1,13 +1,29 @@
+<h1> Product Admin Page </h1>
+<br>
+<br>
+<table id='addproducts', bgcolor="#F2E0D5">
+  <tr><td>
 <%= form_for :new, :url => { :action => "create" }  do |f|  %>
-   <%= f.text_field  :name %>
-   <%=f.text_field :price %>
+<%= f.label :Name %>
+   <%= f.text_field  :name %></td>
+   <td><%= f.label :Price %>
+   <%=f.text_field :price %></td></tr>
+   <tr><td><%= f.label :Description %>
+   <%=f.text_field :description, :size=>"45", :placeholder=> "Keep it pretty simple in here. " %>
+ </td></tr>
+  <tr><td>
+   <%= f.label :Image %>
+   <%=f.text_field :image, :size=>"45", :placeholder=> "Link to image " %>
+</td></tr>
+<tr><td>
    <%= f.submit "Add item" %>
 <%end%>
-
+</td></tr>
+</table>
 <table>
   <% @items.each do |item| %>
 
-<tr><td> <%= item.id %></td><td>  <%= item.name %> </td><td> <%= item.price %></td>
+<tr><td> <%= item.id %></td><td>  <%= item.name %> </td><td> $<%= item.price %></td>
   <td>DELETE <%= button_to "Delete this item", catalog_delete_path(item.name),  method: :delete %></td></tr>
 <% end %>
 </table>

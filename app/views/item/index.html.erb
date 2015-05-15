@@ -1,20 +1,24 @@
-<div id='loginbar'>
+<div id='main'>
+  <div id='indexhead'>
+  <div id='loginbar'>
   <%= link_to 'Log In or Sign Up here', new_user_session_path %>
-
-
 </div>
-<div>
-  <h1>NZer0 Shopping Mall - item </h1>
 
+
+<div>
+          <h1>NZer0 Shopping Mall </h1>
 <h2>Gadgets, Prototyping Boards, EV accessories we have it all! </h2>
 
 <p>Arduino Boards/Cases</p>
 <p>Raspberry Pi Boards/Cases/Cards</p>
 <p>GPIOs</p> </div>
+</div>
 
 <div> <table id=homepage>
 <% @items.each do |item| %>
-<tr><td> <%= item.name %> </td><td> <%= item.price %></td></tr>
+<tr><td> <%= item.name %> </td><td> <%=item.description %></td><td> $ <%= item.price %></td></tr>
 <% end %>
 </table>
+</div>
+<div style='height:250px'></div>
 </div>
