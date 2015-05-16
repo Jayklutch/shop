@@ -1,4 +1,24 @@
+#loginbar{
+  background-color:#DDDDDD;
+  width: 12%;
+  margin:auto;
+  text-align: center;
+}
 
+#adminpage{
+  width: 50%;
+  background-color:#DDDDDD;
+  margin: auto;
+}
+#currentproducts{
+  padding-top: 40px;
+
+}
+
+#addproducts{
+  padding-bottom: 50px;
+
+}
 #indexhead{
   border: 2px;
   border-color: black;
@@ -22,7 +42,7 @@ table#homepage {
   width: 90%;
   margin: auto;
   color: #3B5998;
-
+padding-top: 40px;
 
 }
 

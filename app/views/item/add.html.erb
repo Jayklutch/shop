@@ -1,7 +1,8 @@
-<h1> Product Admin Page </h1>
+<div id='adminpage'>
+  <h1> Product Admin Page </h1>
 <br>
 <br>
-<table id='addproducts', bgcolor="#F2E0D5">
+<table id='addproducts', bgcolor="#9A9EA1">
   <tr><td>
 <%= form_for :new, :url => { :action => "create" }  do |f|  %>
 <%= f.label :Name %>
@@ -20,10 +21,11 @@
 <%end%>
 </td></tr>
 </table>
-<table>
+<table id='currentproducts'>
   <% @items.each do |item| %>
 
 <tr><td> <%= item.id %></td><td>  <%= item.name %> </td><td> $<%= item.price %></td>
   <td>DELETE <%= button_to "Delete this item", catalog_delete_path(item.name),  method: :delete %></td></tr>
 <% end %>
 </table>
+</div>
