@@ -15,16 +15,18 @@
 </div>
 
 <div> <table id=homepage>
-<% @items.each do |item| %>
-<tr><td> <%= item.name %> </td><td> <%=item.description %></td><td> $ <%= item.price %></td></tr>
+  <tr><th>Image<br> (representative only)</th><th>Name</th><th>Description</th><th>Price ($NZD)</th></tr>
+    <% @items.each do |item| %>
+<tr>    <%if item.image!=nil%>
+  <td>                              <%= image_tag(item.image, :size => "135x125")%> </td>
+          <% else %>
+  <td>                               <%= image_tag("noi.jpeg", :size=>"135x125") %> </td>
+          <%end%>
+<td><h2> <%= item.name %></h2> </td>
+<td><h3> <%=item.description %></h3></td>
+<td> <h2>$ <%= item.price %></h2></td></tr>
 <% end %>
 </table>
 </div>
 <div style='height:250px'></div>
 </div>
-
-<% @items.each do |p| %>
-<%= link_to image_tag ("nano.jpeg") %>
-<img src="<%=p.image%>" alt="not working">
-<% end %>
-<img src="../app/assets/images/nano.jpeg" height="90" width="90">

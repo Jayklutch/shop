@@ -1,3 +1,6 @@
 <h1> DELETE PAGE </h1>
 
 <h3> Item deleted </h3>
+<% @items.each do |x| %>
+<% x.destroy! %>
+<% end %>
