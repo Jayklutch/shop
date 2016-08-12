@@ -7,24 +7,22 @@
 <div id='main'>
   <div id='indexhead'>
 
-
 <div>
-          <h1>NZer0 Shopping Mall </h1>
-<h2>Gadgets, Prototyping Boards, EV accessories we have it all! </h2>
+          <h1>Espresso Ninja Parts Ordering System</h1>
+<h2>Created by the awesome Jay</h2>
 
-<p>Arduino Boards/Cases</p>
-<p>Raspberry Pi Boards/Cases/Cards</p>
-<p>GPIOs</p> </div>
+<p>Screens</p>
+<p>Seals</p>
+<p>Filters</p> </div>
 </div>
 
-<p id='smalldetails'> We are currently building our shopping cart, in the meantime please email us your order and we will work on it as quickly as we can </p>
+<p id='smalldetails'> Version 0.3 </p>
 <div> <table id=homepage>
-  <tr><th>Image<br> (representative only)</th><th>Name</th><th>Description</th><th>Price ($NZD)</th></tr>
+  <tr><th><br></th><th>Name</th><th>Description</th><th>Quantity</th></tr>
     <% @items.each do |item| %>
 <tr>    <%if item.image!=nil%>
   <td>                              <%= image_tag(item.image, :size => "135x125")%> </td>
-          <% else %>
-  <td>                               <%= image_tag("noi.jpeg", :size=>"135x125") %> </td>
+      
           <%end%>
 <td><h2> <%= item.name %></h2> </td>
 <td><h3> <%=item.description %></h3></td>
