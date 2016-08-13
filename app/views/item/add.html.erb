@@ -1,7 +1,13 @@
 <div id='adminpage'>
-  <h1> Product Admin Page </h1>
+  <div>
+            <h1>Espresso Ninja Parts Ordering System</h1>
+  <h2>Created by the awesome Jay</h2>
+  </div>
+
+  <p id='smalldetails'> Version 0.3 </p>
 <br>
 <br>
+<div>
 <table id='addproducts', bgcolor="#9A9EA1">
   <tr><td>
 <%= form_for :new, :url => { :action => "create" }  do |f|  %>
@@ -18,12 +24,21 @@
    <%= f.submit "Add item" %>
 <%end%>
 </td></tr>
+</div>
 </table>
+<div>
 <table id='currentproducts'>
+
   <% @items.each do |item| %>
 
-<tr><td> <%= item.id %></td><td>  <%= item.name %> </td><td> $<%= item.price %></td>
-  <td>DELETE <%= button_to "Delete this item", catalog_delete_path(item.name),  method: :delete %></td></tr>
+<tr><td class=unordered> <%= item.created_at.strftime("%d/%m/%Y") %></td> <td class=name><%= item.name %> </td>
+  <td></td><td></td><td></td><td></td><td></td><td></td><td><%= item.description%></td><td></td><td></td><td></td><td></td><td><%= item.quantity %></td><td></td><td></td>
+<td> <%= button_to "This item has been recieved", catalog_delete_path(item.description),  method: :delete %></td><td></td><td></td>
+<% if item.ordered%><td class=ordered>Ordered</td>
+<%else%><td>Not Yet Ordered</td><td> <%= button_to "This item has been ordered", catalog_fix_path(item.description),  method: :post %></td>
+<%end%></tr>
 <% end %>
+
 </table>
+</div>
 </div>

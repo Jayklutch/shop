@@ -15,19 +15,15 @@
 
 <p id='smalldetails'> Version 0.3 </p>
 <div> <table id=homepage>
-  <tr><th><br></th><th>Ordered by:</th><th>Description</th><th>Quantity</th></tr>
+  <tr><th>Ordered by:</th><th>Description</th><th>Quantity</th><th>Requested on</th></tr>
     <% @items.each do |item| %>
-<tr>    <%if item.image!=nil%>
-  <td>                              <%= image_tag(item.image, :size => "135x125")%> </td>
-
-          <%end%>
-<td><h2> <%= item.name %></h2> </td>
+<td><h3> <%= item.name %></h3> </td>
 <td><h3> <%=item.description %></h3></td>
-<td> <h2>$ <%= item.quantity %></h2></td></tr>
-<td> <h2>$ <%= item.created_at %></h2></td></tr>
+<td> <h2><%= item.quantity %></h2></td>
+<td> <h3><%= item.created_at.strftime("%d/%m/%Y") %></h3></td></tr>
 <% end %>
 </table>
 </div>
-<%= link_to 'Ask for an item to be ordered', catalog_new_path%>
+<%= link_to 'Ask for an item to be ordered', create_path%>
 <div style='height:250px'></div>
 </div>

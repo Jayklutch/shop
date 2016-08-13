@@ -13,8 +13,15 @@ def create
  redirect_to :action => 'add'
 end
 
+def fix
+  @fix=Item.find_by description: (params[:format])
+  @fix.ordered=true
+  @fix.save!
+redirect_to :action =>'add'
+end
+
   def delete
-    @vanish=Item.find_by name: (params[:format])
+    @vanish=Item.find_by description: (params[:format])
   @vanish.destroy!
   redirect_to :action=>'add'
   end

@@ -3,8 +3,9 @@ class CreateItems < ActiveRecord::Migration
     create_table :items do |t|
       t.string :name
       t.string :description
-      t.integer :price
+      t.integer :quantity
       t.string :image
+      t.boolean :ordered, default: false
 
       t.timestamps null: false
     end

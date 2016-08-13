@@ -18,6 +18,7 @@ Rails.application.routes.draw do
    post 'create'=>'item#create'
    patch 'create'=>'item#create'
    get 'create'=>'item#add'
+   post 'catalog/fix'=>'item#fix'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
