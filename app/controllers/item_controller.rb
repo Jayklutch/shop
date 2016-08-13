@@ -9,7 +9,7 @@ def add
 end
 
 def create
-  @new = Item.create!(:name => params[:new][:name], :price=>params[:new][:price], :description=>params[:new][:description], :image=>params[:new][:image])
+  @new = Item.create!(:name => params[:new][:name], :quantity=>params[:new][:quantity], :description=>params[:new][:description])
  redirect_to :action => 'add'
 end
 

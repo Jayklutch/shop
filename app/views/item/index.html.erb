@@ -10,25 +10,24 @@
 <div>
           <h1>Espresso Ninja Parts Ordering System</h1>
 <h2>Created by the awesome Jay</h2>
-
-<p>Screens</p>
-<p>Seals</p>
-<p>Filters</p> </div>
+ </div>
 </div>
 
 <p id='smalldetails'> Version 0.3 </p>
 <div> <table id=homepage>
-  <tr><th><br></th><th>Name</th><th>Description</th><th>Quantity</th></tr>
+  <tr><th><br></th><th>Ordered by:</th><th>Description</th><th>Quantity</th></tr>
     <% @items.each do |item| %>
 <tr>    <%if item.image!=nil%>
   <td>                              <%= image_tag(item.image, :size => "135x125")%> </td>
-      
+
           <%end%>
 <td><h2> <%= item.name %></h2> </td>
 <td><h3> <%=item.description %></h3></td>
-<td> <h2>$ <%= item.price %></h2></td></tr>
+<td> <h2>$ <%= item.quantity %></h2></td></tr>
+<td> <h2>$ <%= item.created_at %></h2></td></tr>
 <% end %>
 </table>
 </div>
+<%= link_to 'Ask for an item to be ordered', catalog_new_path%>
 <div style='height:250px'></div>
 </div>

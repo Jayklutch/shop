@@ -6,7 +6,7 @@
   <tr><td>
 <%= form_for :new, :url => { :action => "create" }  do |f|  %>
 <%= f.label :Name %>
-   <%= f.text_field  :name %></td>
+   <%= f.text_field  :name, :placeholder=>"Ordered by:"%></td>
    <td><%= f.label :quantity %>
    <%=f.text_field :quantity %></td></tr>
    <tr><td><%= f.label :Description %>
